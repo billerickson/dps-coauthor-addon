@@ -26,9 +26,27 @@
  * Multiple Authors in DPS
  *
  */
-function be_multiple_authors_in_dps( $output ) {
-	if( function_exists( 'coauthors' ) )
-		$output = ' <span class="author">' . coauthors( ', ', ' and ', 'by ', '', false ) . '</span>';
-	return $output;
+function be_multiple_authors_in_dps( $output, $original_atts ) {
+
+	if( ! function_exists( 'coauthors' ) )
+		return $output;
+
+	$atts = shortcode_atts( array( 
+		'coauthor_function'     => 'coauthors',
+		'coauthor_between'      => ', ',
+		'coauthor_between_last' => ' and ',
+		'coauthor_before'       => 'by ',
+		'coauthor_after'        => '',
+	), $original_atts, 'dps-coauthor-addon' );
+	
+	$function     = in_array( $atts['coauthor_function'], array( 'coauthors', 'coauthors_posts_links', 'coauthors_links' ) ) ? $atts['coauthor_function'] : 'coauthors';
+	$between      = esc_html( $atts['coauthor_between'] );
+	$between_last = esc_html( $atts['coauthor_between_last'] );
+	$before       = esc_html( $atts['coauthor_before'] );
+	$after        = esc_html( $atts['coauthor_after'] );
+	$echo         = false;
+	
+	return ' <span class="author">' . call_user_func_array( $function, array( $between, $between_last, $before, $after, $echo ) ) . '</span>';
+
 }
-add_filter( 'display_posts_shortcode_author', 'be_multiple_authors_in_dps' );
+add_filter( 'display_posts_shortcode_author', 'be_multiple_authors_in_dps', 10, 2 );
