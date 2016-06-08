@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Display Posts Shortcode, Co-Authors Plus Addon
+ * Plugin Name: Co-Authors Plus Addon for Display Posts Shortcode
  * Plugin URI: https://github.com/billerickson/dps-coauthor-addon
  * Description: Display multiple authors in post listings
  * Version: 1.0.0
