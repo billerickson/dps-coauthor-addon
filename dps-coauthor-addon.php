@@ -26,7 +26,7 @@
  * Multiple Authors in DPS
  *
  */
-function be_multiple_authors_in_dps( $output, $original_atts ) {
+function be_multiple_authors_in_dps( $output = '', $original_atts = array() ) {
 
 	if( ! function_exists( 'coauthors' ) )
 		return $output;
