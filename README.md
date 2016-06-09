@@ -1,4 +1,4 @@
-## Co-Authors Plus Addon for Display Posts Shortcode
+## Co-Authors Plus Extension for Display Posts Shortcode
 
 If you have both [Display Posts Shortcode](https://wordpress.org/plugins/display-posts-shortcode/) and [Co-Authors Plus](https://wordpress.org/plugins/co-authors-plus/) installed, use the following shortcode to display a list of posts and the authors associated with each post:
 
