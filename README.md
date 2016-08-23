@@ -8,7 +8,7 @@ This can be used in conjunction with any other query arguments for Display Posts
 
 ### Customization
 
-You need to have version 2.7.0 or higher of Display Posts Shortcode to use these parameters. You can [download it here](https://github.com/billerickson/display-posts-shortcode/archive/master.zip) as it hasn't been released on WordPress.org yet.
+You need to have version 2.7.0 or higher of Display Posts Shortcode to use these parameters. 
 
 The following parameters can be added to the shortcode to customize the output of the author list
 
